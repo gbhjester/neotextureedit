@@ -32,6 +32,7 @@ import javax.swing.text.Document;
 import engine.base.FMath;
 import engine.base.Matrix3x3;
 import engine.parameters.Matrix3x3Param;
+import java.awt.Graphics;
 
 class Matrix3x3ParameterEditor extends AbstractParameterEditor implements DocumentListener, ActionListener {
 	private static final long serialVersionUID = -4845723469494814010L;
