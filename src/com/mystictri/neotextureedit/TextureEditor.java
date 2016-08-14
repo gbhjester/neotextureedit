@@ -979,6 +979,10 @@ public class TextureEditor implements ActionListener, KeyListener {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		// Disable d3d acceleration
+		// In general, ogl or d3d acceleration crashes the JVM
+		System.setProperty("sun.java2d.d3d", "false");
+		
 		JPopupMenu.setDefaultLightWeightPopupEnabled(false); // needed for the
 																// gl canvas
 		// font for the basic help dialogs

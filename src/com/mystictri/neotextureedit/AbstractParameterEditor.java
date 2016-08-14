@@ -45,8 +45,27 @@ class AbstractParameterEditor extends JPanel {
 	public void paint(Graphics g) {
 		super.paint(g);
 		
+		// Clear this widget
 		g.clearRect(0, 0, getWidth(), getHeight());
 		
+		// Paint components, then border, then children
+		this.paintComponents(g);
+		this.paintBorder(g);
+		this.paintChildren(g);
+	}
+	
+	@Override
+	public void repaint() {
+		Graphics g = getGraphics();
+		
+		if (g == null) {
+			return;
+		}
+		
+		// Clear this widget
+		g.clearRect(0, 0, getWidth(), getHeight());
+		
+		// Paint components, then border, then children
 		this.paintComponents(g);
 		this.paintBorder(g);
 		this.paintChildren(g);

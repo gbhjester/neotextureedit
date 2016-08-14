@@ -770,8 +770,6 @@ public final class TextureGraphEditorPanel extends JPanel implements MouseListen
 	
 	
 	
-	
-	
 	public void moveDesktop(int dx, int dy) {
 		desktopX += dx;
 		desktopY += dy;
